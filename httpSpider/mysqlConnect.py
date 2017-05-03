@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import mysql.connector
 
-class MysqlConnect():
+class MysqlConnect:
 	#构造函数
 	def __int__(self,path):
 		self.path = path
 
 	#连接数据库
-	def connectDataBase():
+	def connectDataBase(self):
 		config = {
 		  'user': '',
 		  'password': '',
@@ -23,9 +23,7 @@ class MysqlConnect():
 		for value in values:
 			print 'id:' + str(value[0]) + ', username: ' + value[1] + ',password: ' + value[2]
 		cnx.close()
-
-info = MysqlConnect('hello')
-info.connectDataBase()
+		return values
 
 
 
